@@ -136,8 +136,8 @@ Tables | Must | not
 be | pretty | !
 
 
-| But       | a little   | effort |
-| --------- | ---------- | ------ |
+| But       | a little    | effort |
+| --------- | ----------  | ------ |
 | increases | readability | a lot  |
 
 ## Block quotes
