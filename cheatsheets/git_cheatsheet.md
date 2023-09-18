@@ -29,6 +29,7 @@ git add [file / .]
 git reset [file / --hard]
 git diff [--staged]
 git commit -m "[message]"
+git commit -am "[message]"
 ````
 
 ## Branch and merge
