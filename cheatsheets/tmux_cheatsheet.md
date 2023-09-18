@@ -3,7 +3,7 @@ this document is intended as reference for some tmux commands. The author does n
 
 ## Table of contents
 * [Windows](#windows)
-
+* [Panes](#panes)
 
 ## Windows
 |Shortcut|Effect|
