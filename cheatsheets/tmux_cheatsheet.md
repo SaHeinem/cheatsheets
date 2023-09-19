@@ -2,10 +2,17 @@
 this document is intended as reference for some tmux commands. The author does not claim completeness
 
 ## Table of contents
-* [Windows](#windows)
+* [Autostart in ZSH](#autostart-in-zsh)
+* [Window](#window)
 * [Panes](#panes)
 
-## Windows
+## Autostart in ZSH
+add this to your `.zshrc` file:
+````sh
+if [ "$TMUX" = "" ]; then tmux; fi
+````
+
+## Window
 |Shortcut|Effect|
 |---|---|
 |Ctrl + b c|create new window|
@@ -18,7 +25,6 @@ this document is intended as reference for some tmux commands. The author does n
 |Ctrl + b l|last active|
 
 
-
 ## Panes
 |Shortcut|Effect|
 |---|---|
@@ -28,3 +34,12 @@ this document is intended as reference for some tmux commands. The author does n
 |Ctrl + b ←/→|use left right or up down pane|
 |Ctrl + b {/}|move left / right|
 |Ctrl + b !|convert pane to window|
+
+### Open Pane in same directory
+edit your `.tmux.conf` file:
+````
+# Set new panes to open in current directory
+bind c new-window -c "#{pane_current_path}"
+bind '"' split-window -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
+````
