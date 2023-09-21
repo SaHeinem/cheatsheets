@@ -7,3 +7,4 @@ a collection of my cheatsheets that I might or might not periodically update
 * [tmux](/cheatsheets/tmux_cheatsheet.md)
 * [git](/cheatsheets/git_cheatsheet.md)
 * [dotfiles](/cheatsheets/dotfiles_cheatsheet.md)
+* [GPG](/cheatsheets/gpg_cheatsheet.md)
