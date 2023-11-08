@@ -18,4 +18,10 @@ To make it easier to setup the dotfiles on a new machine, we create a README fil
 ## Setup a new machine
 The process to setup a new machine with the exisiting dotfiles is then to simply copy the dotfiles from the repo to the home directory and run the shell script.
 
+## Solve error; permission too open
+the ssh dir has to be "protected". Change the permissions like so:
+```
+chmod 600 ~/.ssh/id_rsa
+```
+
 ## 🚨 NEVER CHECKIN SENSITIVE DATA 🚨
