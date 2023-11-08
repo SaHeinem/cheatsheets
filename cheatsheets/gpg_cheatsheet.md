@@ -34,6 +34,24 @@ gpg --import public.gpg
 gpg --import private.gpg
 ````
 
+## add correct GPG ID to gitconfig
+
+List all possible keys
+```bash
+gpg --list-secret-keys --keyid-format=long
+```
+
+Possible result
+```
+/home/sascha/.gnupg/pubring.kbx
+-------------------------------
+sec   ed25519/D3B9288EA4CD1F88 2022-10-12 [SC]
+      A583F85EC13EDF2142C72AEAD3B9288EA4CD1F88
+uid                 [ unknown] Sascha Heinemann <sascha.heinemann@globalways.net>
+ssb   cv25519/072AA55BA2A334E6 2022-10-12 [E]
+```
+use the string after the slash in the _sec_ output in the gitconfig
+
 ## Setup GPG on MacOS
 
 ### Steps on 🍎 MacOS
