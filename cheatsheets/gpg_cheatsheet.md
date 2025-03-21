@@ -68,9 +68,40 @@ For GUI or e.g. vscode and other integrations
 ```bash
 brew install pinentry-mac
 ```
-**Follow the Prompt** to add your GPG program path
 
-e.g.
+## Change GPG pinentry to pinentry-mac on 🍎 MacOS
+
+### Verify the exact path
 ```bash
-echo 'pinentry-program /opt/homebrew/bin/pinentry-mac' >> ~/.gnupg/gpg-agent.conf
+which pinentry-mac
+```
+
+### Create  ~/.gnupg/gpg-agent.conf
+```bash
+pinentry-program $(which pinentry-mac)
+```
+```bash
+chmod 600 ~/.gnupg/gpg-agent.conf
+```
+
+### Ensure your shell exports
+```bash
+export GPG_TTY=$(tty)
+```
+Then reload:
+```bash
+source ~/.zshrc
+```
+### Kill and reload agent
+```bash
+gpgconf --kill gpg-agent
+gpgconf --launch gpg-agent
+```
+### Test directly
+```bash
+pinentry-mac
+```
+### Finally test signing
+```bash
+echo test | gpg --clearsign
 ```
